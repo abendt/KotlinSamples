@@ -1,3 +1,4 @@
 # Kotlin Sample Projects
 
-https://travis-ci.org/abendt/KotlinSamples.svg?branch=master
+![travis status](https://travis-ci.org/abendt/KotlinSamples.svg?branch=master "Travis Status")
+
