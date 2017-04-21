@@ -11,10 +11,7 @@ buildscript {
     }
 }
 
-plugins {
-    id "org.jetbrains.kotlin.jvm" version "1.1.1"
-}
-
+apply plugin: 'kotlin'
 apply plugin: 'org.junit.platform.gradle.plugin'
 
 junitPlatform {
@@ -39,7 +36,7 @@ repositories {
 }
 
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
     testCompile "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
 
     testCompile 'org.junit.platform:junit-platform-console:1.0.0-M3'
