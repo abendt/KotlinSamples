@@ -1,3 +1,5 @@
+basic Kotlin/Spek setup
+
 # Spek documentation
 http://spekframework.org/docs/latest/#_overview
 

@@ -1,0 +1,1 @@
+minimal project with JUnit and AssertJ
