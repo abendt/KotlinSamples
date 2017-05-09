@@ -1,5 +1,5 @@
 buildscript {
-    ext.kotlin_version = '1.1.1'
+    ext.kotlin_version = '1.1.2-3'
 
     repositories {
         mavenCentral()
@@ -47,11 +47,12 @@ dependencies {
     testCompile ("org.jetbrains.spek:spek-api:1.1.0")  {
         exclude group: 'org.jetbrains.kotlin'
     }
+
     testRuntime ('org.jetbrains.spek:spek-junit-platform-engine:1.1.0') {
         exclude group: 'org.junit.platform'
         exclude group: 'org.jetbrains.kotlin'
     }
 
     testCompile 'net.wuerl.kotlin:assertj-core-kotlin:0.2.0'
-    testCompile 'org.assertj:assertj-core:3.6.2'
+    testCompile 'org.assertj:assertj-core:3.7.0'
 }
