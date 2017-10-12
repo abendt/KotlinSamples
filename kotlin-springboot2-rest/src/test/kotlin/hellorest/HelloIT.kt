@@ -10,14 +10,17 @@ import org.junit.runner.RunWith
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.boot.test.web.client.TestRestTemplate
+import org.springframework.boot.web.server.LocalServerPort
 import org.springframework.test.context.junit4.SpringRunner
 import java.net.URL
 
 @RunWith(SpringRunner::class)
-@SpringBootTest
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+
 class HelloIT {
 
-    private val port: Int = 8080
+    @LocalServerPort
+    private val port: Int = -1
 
     lateinit var base: URL
 
@@ -25,7 +28,7 @@ class HelloIT {
     fun setUp() {
         this.base = URL("http://localhost:$port/")
 
-        RestAssured.port = 8080
+        RestAssured.port = port
     }
 
     @Test
