@@ -16,7 +16,7 @@ import java.net.URL
 class HelloIT {
 
     @LocalServerPort
-    private val port: Int = -1
+    private lateinit var port: String
 
     lateinit var base: URL
 
