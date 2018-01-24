@@ -8,10 +8,10 @@ val p = project {
     artifactId = name
     version = "0.1"
 
-    val kotlin_version = "1.2.20"
+    val kotlin_version = "1.2.21"
 
     dependencies {
-        compile("org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version")
+        compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version")
     }
 
     dependenciesTest {
