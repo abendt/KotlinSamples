@@ -39,7 +39,7 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     testCompile "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
 
     testCompile 'org.junit.platform:junit-platform-console:1.0.0-M3'
@@ -54,5 +54,5 @@ dependencies {
     }
 
     testCompile 'net.wuerl.kotlin:assertj-core-kotlin:0.2.1'
-    testCompile 'org.assertj:assertj-core:3.8.0'
+    testCompile 'org.assertj:assertj-core:3.9.0'
 }
