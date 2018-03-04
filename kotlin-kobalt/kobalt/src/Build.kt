@@ -8,7 +8,7 @@ val p = project {
     artifactId = name
     version = "0.1"
 
-    val kotlin_version = "1.2.21"
+    val kotlin_version = "1.2.30"
 
     dependencies {
         compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version")
@@ -21,7 +21,7 @@ val p = project {
         compile("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
 
         compile("net.wuerl.kotlin:assertj-core-kotlin:0.2.1")
-        compile("org.assertj:assertj-core:3.9.0")
+        compile("org.assertj:assertj-core:3.9.1")
     }
 
 
