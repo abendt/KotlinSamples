@@ -3,6 +3,7 @@ package hellorest
 import io.restassured.RestAssured
 import io.restassured.RestAssured.get
 import org.assertj.core.api.Assertions
+import org.hamcrest.CoreMatchers.containsString
 import org.hamcrest.CoreMatchers.equalTo
 import org.junit.Before
 import org.junit.Test
@@ -35,6 +36,6 @@ class HelloIT {
     fun canGetHelloWorld() {
         get("/").then()
                 .statusCode(200)
-                .body(equalTo("Hello World!"))
+                .body(containsString("Kotlin"))
     }
 }

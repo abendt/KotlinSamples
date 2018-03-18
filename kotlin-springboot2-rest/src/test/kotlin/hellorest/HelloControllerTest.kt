@@ -13,6 +13,5 @@ class HelloControllerTest {
         client.get().uri("/")
                 .exchange()
                 .expectStatus().isOk
-                .expectBody().equals("Hello World")
     }
 }
