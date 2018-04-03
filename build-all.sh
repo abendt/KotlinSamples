@@ -1,5 +1,5 @@
 #!/bin/bash -e
 
-./gradlew build
+./gradlew --no-daemon build
 
 cd kotlin-kobalt && ./kobaltw test
