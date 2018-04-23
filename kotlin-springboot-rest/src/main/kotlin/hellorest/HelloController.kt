@@ -12,7 +12,7 @@ class HelloController {
 
     @RequestMapping("/")
     fun index(): String {
-        return "Greetings from Spring Boot!" + helloConfiguration.name
+        return "Greetings from Spring Boot!"
     }
 }
 
