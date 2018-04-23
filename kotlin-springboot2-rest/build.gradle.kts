@@ -7,11 +7,11 @@ buildscript {
 }
 
 plugins {
-    val kotlinVersion = "1.2.31"
+    val kotlinVersion = "1.2.40"
 
     kotlin("jvm") version kotlinVersion
-    id("org.springframework.boot") version "2.0.0.RELEASE"
-    id("io.spring.dependency-management") version "1.0.4.RELEASE"
+    id("org.springframework.boot") version "2.0.1.RELEASE"
+    id("io.spring.dependency-management") version "1.0.5.RELEASE"
     id("org.jetbrains.kotlin.plugin.spring") version kotlinVersion
 }
 
@@ -24,7 +24,7 @@ dependencies {
     compile(kotlin("reflect"))
     compile("org.springframework.boot:spring-boot-starter")
     compile("org.springframework.boot:spring-boot-starter-webflux")
-    compile("com.fasterxml.jackson.module:jackson-module-kotlin:2.9.4")
+    compile("com.fasterxml.jackson.module:jackson-module-kotlin:2.9.5")
     compile("org.jetbrains.kotlinx:kotlinx-html-jvm:0.6.9")
 
     testCompile("org.springframework.boot:spring-boot-starter-test")
@@ -33,7 +33,7 @@ dependencies {
     testCompile("net.wuerl.kotlin:assertj-core-kotlin:0.2.1")
     testCompile("org.assertj:assertj-core:3.9.1")
     testCompile("com.nhaarman:mockito-kotlin-kt1.1:1.5.0")
-    testCompile("io.rest-assured:rest-assured:3.0.7")
+    testCompile("io.rest-assured:rest-assured:3.1.0")
 }
 
 tasks {
