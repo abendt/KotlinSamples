@@ -9,6 +9,14 @@ import org.jetbrains.spek.api.dsl.on
 object SimpleSpec: Spek({
     describe("Hello World") {
 
+        beforeGroup {
+            println("before each group")
+        }
+
+        beforeEachTest {
+            println("before each test")
+        }
+
         on("hello to world") {
             it("should return the correct greeting") {
                 assertThat(sayHelloTo("World")).isEqualTo("Hello World!")
