@@ -7,10 +7,10 @@ buildscript {
 }
 
 plugins {
-    val kotlinVersion = "1.2.40"
+    val kotlinVersion = "1.2.41"
 
     kotlin("jvm") version kotlinVersion
-    id("org.springframework.boot") version "2.0.1.RELEASE"
+    id("org.springframework.boot") version "2.0.2.RELEASE"
     id("io.spring.dependency-management") version "1.0.5.RELEASE"
     id("org.jetbrains.kotlin.plugin.spring") version kotlinVersion
 }
@@ -25,7 +25,7 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter")
     compile("org.springframework.boot:spring-boot-starter-webflux")
     compile("com.fasterxml.jackson.module:jackson-module-kotlin:2.9.5")
-    compile("org.jetbrains.kotlinx:kotlinx-html-jvm:0.6.9")
+    compile("org.jetbrains.kotlinx:kotlinx-html-jvm:0.6.10")
 
     testCompile("org.springframework.boot:spring-boot-starter-test")
     testCompile("io.projectreactor:reactor-test")
