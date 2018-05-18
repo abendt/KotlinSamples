@@ -1,7 +1,8 @@
 .idea/
-**/.gradle/**
-build
-target
-kobaltBuild
-.kobalt
+.gradle/
+build/
+out/
+target/
+kobaltBuild/
+.kobalt/
 *.iml
