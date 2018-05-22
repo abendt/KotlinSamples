@@ -13,11 +13,9 @@ buildscript {
 
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.10.RELEASE")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.13.RELEASE")
         classpath "org.jetbrains.kotlin:kotlin-allopen:$kotlin_version"
         classpath 'io.spring.gradle:propdeps-plugin:0.0.10.RELEASE'
-
-
     }
 }
 
@@ -55,7 +53,6 @@ dependencies {
     optional "org.springframework.boot:spring-boot-configuration-processor"
 
     kapt("org.springframework.boot:spring-boot-configuration-processor")
-
 }
 
 test {
