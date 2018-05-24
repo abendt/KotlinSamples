@@ -8,7 +8,7 @@ buildscript {
 
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath 'org.junit.platform:junit-platform-gradle-plugin:1.0.0'
+        classpath 'org.junit.platform:junit-platform-gradle-plugin:1.2.0'
     }
 }
 
@@ -54,5 +54,5 @@ dependencies {
     }
 
     testCompile 'net.wuerl.kotlin:assertj-core-kotlin:0.2.1'
-    testCompile 'org.assertj:assertj-core:3.9.1'
+    testCompile 'org.assertj:assertj-core:3.10.0'
 }
