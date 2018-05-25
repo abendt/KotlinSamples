@@ -31,7 +31,7 @@ dependencies {
     testCompile("io.projectreactor:reactor-test")
     testCompile(kotlin("test-junit"))
     testCompile("net.wuerl.kotlin:assertj-core-kotlin:0.2.1")
-    testCompile("org.assertj:assertj-core:3.9.1")
+    testCompile("org.assertj:assertj-core:3.10.0")
     testCompile("com.nhaarman:mockito-kotlin-kt1.1:1.5.0")
     testCompile("io.rest-assured:rest-assured:3.1.0")
 }
