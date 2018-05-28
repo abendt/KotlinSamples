@@ -20,7 +20,7 @@ dependencies {
     compile(kotlin("stdlib-jdk8"))
     compile(kotlin("reflect"))
 
-    testCompile("io.kotlintest:kotlintest-runner-junit5:3.1.3")
+    testCompile("io.kotlintest:kotlintest-runner-junit5:3.1.4")
 
     testCompile("net.wuerl.kotlin:assertj-core-kotlin:0.2.1")
     testCompile("org.assertj:assertj-core:3.10.0")
