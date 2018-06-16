@@ -7,7 +7,7 @@ buildscript {
 }
 
 plugins {
-    val kotlinVersion = "1.2.41"
+    val kotlinVersion = "1.2.50"
 
     kotlin("jvm") version kotlinVersion
 }
