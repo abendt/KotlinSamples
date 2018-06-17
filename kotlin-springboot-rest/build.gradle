@@ -35,6 +35,8 @@ targetCompatibility = 1.8
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
 
+    compile 'org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:0.23.3'
+
     compile("org.springframework.boot:spring-boot-starter-web")
     // tag::actuator[]
     compile("org.springframework.boot:spring-boot-starter-actuator")
@@ -52,6 +54,12 @@ dependencies {
     optional "org.springframework.boot:spring-boot-configuration-processor"
 
     kapt("org.springframework.boot:spring-boot-configuration-processor")
+}
+
+kotlin {
+    experimental {
+        coroutines 'enable'
+    }
 }
 
 test {
