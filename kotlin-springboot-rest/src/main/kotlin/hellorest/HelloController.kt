@@ -56,19 +56,19 @@ class HelloController {
 
     @RequestMapping("/combineSync")
     fun combineSync(): String {
-        val name = api1()
-        val greeting = api2(name)
-        val motd = api3()
+        val name = getUserName()
+        val greeting = sayHelloTo(name)
+        val motd = getMessageOfTheDay()
 
         return "$greeting $motd"
     }
 
     @RequestMapping("/combineAsync")
     fun combineAsync(): CompletableFuture<String> {
-        val greeting = asyncApi1().thenCompose {
-            asyncApi2(it)
+        val greeting = asyncGetUserName().thenCompose {
+            asyncSayHelloTo(it)
         }
-        val motd = asyncApi3()
+        val motd = asyncGetMessageOfTheDay()
 
         return greeting.thenCombine(motd) { g, m -> "$g $m" }
     }
@@ -84,30 +84,30 @@ class HelloController {
         return result
     }
 
-    fun api1(): String {
+    fun getUserName(): String {
         Thread.sleep(1000)
         return "Kotlin"
     }
 
-    fun asyncApi1() = execAsync { api1() }
-    fun asyncApi2(name: String) = execAsync { api2(name) }
-    fun asyncApi3() = execAsync { api3() }
+    fun asyncGetUserName() = execAsync { getUserName() }
+    fun asyncSayHelloTo(name: String) = execAsync { sayHelloTo(name) }
+    fun asyncGetMessageOfTheDay() = execAsync { getMessageOfTheDay() }
 
-    fun api2(name: String): String {
+    fun sayHelloTo(name: String): String {
         Thread.sleep(1000)
         return "Hello $name"
     }
 
-    fun api3(): String {
+    fun getMessageOfTheDay(): String {
         Thread.sleep(1000)
         return "What a nice day!"
     }
 
     @RequestMapping("/combineCoroutine")
-    fun combineCoroutine(): CompletableFuture<String> = future {
-        val name = asyncApi1()
-        val motd = asyncApi3()
-        val greeting = asyncApi2(name.await())
+    fun combineCoroutine() = future {
+        val name = asyncGetUserName()
+        val motd = asyncGetMessageOfTheDay()
+        val greeting = asyncSayHelloTo(name.await())
 
         greeting.await() + " " + motd.await()
     }
