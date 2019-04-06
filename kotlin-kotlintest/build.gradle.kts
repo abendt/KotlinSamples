@@ -10,6 +10,11 @@ plugins {
     val kotlinVersion = "1.3.21"
 
     kotlin("jvm") version kotlinVersion
+    id("com.adarshr.test-logger") version "1.6.0"
+}
+
+testlogger {
+    setTheme("mocha")
 }
 
 repositories {
