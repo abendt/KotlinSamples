@@ -21,7 +21,7 @@ val p = project {
         compile("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
 
         compile("net.wuerl.kotlin:assertj-core-kotlin:0.2.1")
-        compile("org.assertj:assertj-core:3.10.0")
+        compile("org.assertj:assertj-core:3.12.2")
     }
 
     assemble {

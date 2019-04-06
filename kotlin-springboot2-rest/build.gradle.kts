@@ -13,6 +13,11 @@ plugins {
     id("org.jetbrains.kotlin.plugin.spring") version kotlinVersion
     id("org.springframework.boot") version "2.1.4.RELEASE"
     id("io.spring.dependency-management") version "1.0.7.RELEASE"
+    id("com.adarshr.test-logger") version "1.6.0"
+}
+
+testlogger {
+    setTheme("mocha")
 }
 
 repositories {
@@ -24,16 +29,16 @@ dependencies {
     compile(kotlin("reflect"))
     compile("org.springframework.boot:spring-boot-starter")
     compile("org.springframework.boot:spring-boot-starter-webflux")
-    compile("com.fasterxml.jackson.module:jackson-module-kotlin:2.9.5")
-    compile("org.jetbrains.kotlinx:kotlinx-html-jvm:0.6.10")
+    compile("com.fasterxml.jackson.module:jackson-module-kotlin")
+    compile("org.jetbrains.kotlinx:kotlinx-html-jvm:0.6.12")
 
     testCompile("org.springframework.boot:spring-boot-starter-test")
     testCompile("io.projectreactor:reactor-test")
     testCompile(kotlin("test-junit"))
     testCompile("net.wuerl.kotlin:assertj-core-kotlin:0.2.1")
-    testCompile("org.assertj:assertj-core:3.10.0")
+    testCompile("org.assertj:assertj-core:3.12.2")
     testCompile("com.nhaarman:mockito-kotlin-kt1.1:1.5.0")
-    testCompile("io.rest-assured:rest-assured:3.1.0")
+    testCompile("io.rest-assured:rest-assured:3.3.0")
 }
 
 tasks {
