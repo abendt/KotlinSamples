@@ -7,12 +7,12 @@ buildscript {
 }
 
 plugins {
-    val kotlinVersion = "1.2.50"
+    val kotlinVersion = "1.3.21"
 
     kotlin("jvm") version kotlinVersion
     id("org.jetbrains.kotlin.plugin.spring") version kotlinVersion
-    id("org.springframework.boot") version "2.0.2.RELEASE"
-    id("io.spring.dependency-management") version "1.0.5.RELEASE"
+    id("org.springframework.boot") version "2.1.4.RELEASE"
+    id("io.spring.dependency-management") version "1.0.7.RELEASE"
 }
 
 repositories {

@@ -1,5 +1,4 @@
 include 'kotlin-helloworld'
 include 'kotlin-hellospek'
-include 'kotlin-springboot-rest'
 include 'kotlin-springboot2-rest'
 include 'kotlin-kotlintest'

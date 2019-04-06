@@ -7,7 +7,7 @@ buildscript {
 }
 
 plugins {
-    val kotlinVersion = "1.2.50"
+    val kotlinVersion = "1.3.21"
 
     kotlin("jvm") version kotlinVersion
 }
@@ -20,7 +20,7 @@ dependencies {
     compile(kotlin("stdlib-jdk8"))
     compile(kotlin("reflect"))
 
-    testCompile("io.kotlintest:kotlintest-runner-junit5:3.1.6")
+    testCompile("io.kotlintest:kotlintest-runner-junit5:3.3.2")
 
     testCompile("net.wuerl.kotlin:assertj-core-kotlin:0.2.1")
     testCompile("org.assertj:assertj-core:3.10.0")
