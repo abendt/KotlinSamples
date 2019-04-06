@@ -6,3 +6,4 @@ target/
 kobaltBuild/
 .kobalt/
 *.iml
+.kotlintest
